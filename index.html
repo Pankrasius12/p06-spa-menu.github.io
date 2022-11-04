@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="P06-spa-menu.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>PANKRASIUS NGGALA</title>
+</head>
+<body>
+    <nav class="wrapper">
+      <div class="brand">
+      <div class="firstname">PANKRASIUS</div>
+      <div class="lastname">NGGALA</div>
+      </div>
+      <ul class="navigation">
+        <li><a href="" id="navigation1">MY Profil</a></li>
+        <li><a href="" id="active">Aboutme</a></li>
+        <li><a href="" id="projectnav">project</a></li>
+        <img src="foto.jpeg" width="50px" height="50px"/>
+      </ul>
+    </nav>
+  <div class="conteiner1">
+    <div id="profile" onclick="Myprofile()"> 
+      <div>
+        <h2>NAME  :<span>PANKRASIUS NGGALA</span></h2>
+        <h2>AGE :<span>19 th</span></h2>
+        <h2>GENDER :<span>MALE</span></h2>
+        <h2>ADDRESS :<span>FLORES OF EAST NUSA TENGGARA</span></h2>
+        <h2>HOBBY :<span>FOOTBALL</span></h2>
+      </div>
+    </div>
+      <div id="profile1">
+      <div class="profile1value">
+        <br>
+        <br>
+        <h2>-<span>I'am Pankrasius Nggala, i'am from flores east nusa tenggara, now i am in cirebon city to continue my education at stmik ikmi cirebon with the undergraduate program of informatics engineering </span></h2>
+        <h2>-<span>My hobby is football</span></h2>
+      </div>
+    </div>
+      <div id="project">
+      <div class="projectvalue">
+        <a href="https://www.instagram.com/m.nggala/"><h2>Contact Me</h2></a>
+      </div>
+    </div>
+  </div>
+  <script>
+  $(document).ready(function(){
+    $('#navigation1').click(function(){
+      $('#profile').addClass('open')
+      $('#project').removeClass('open')
+      $('#profile1').removeClass('open')
+      return false; 
+    });
+    $('#active').click(function(){
+      $('#profile1').addClass('open');
+      $('#profile').removeClass('open');
+      $('#project').removeClass('open');
+      return false; 
+    });
+    $("#projectnav").click(function(){
+      $('#project').addClass('open')
+      $('#profile1').removeClass('open')
+      $('#profile').removeClass('open')
+      return false; 
+    });
+  });
+  </script>
+  </body>
